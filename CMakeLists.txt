@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.2)
+set(project_name "main")
+find_package(OpenCV REQUIRED)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+include_directories(${OpenCV_INCLUDE_DIRS} ./linear-regression )
+add_executable(${project_name} main.cpp)
+target_link_libraries(${project_name} ${OpenCV_LIBS})
